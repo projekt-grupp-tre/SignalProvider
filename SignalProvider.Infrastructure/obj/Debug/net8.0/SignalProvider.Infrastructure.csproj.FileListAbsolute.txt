@@ -1,0 +1,15 @@
+/Users/levi/Desktop/SignalProvider/SignalProvider.Infrastructure/bin/Debug/net8.0/SignalProvider.Infrastructure.deps.json
+/Users/levi/Desktop/SignalProvider/SignalProvider.Infrastructure/bin/Debug/net8.0/SignalProvider.Infrastructure.dll
+/Users/levi/Desktop/SignalProvider/SignalProvider.Infrastructure/bin/Debug/net8.0/SignalProvider.Infrastructure.pdb
+/Users/levi/Desktop/SignalProvider/SignalProvider.Infrastructure/bin/Debug/net8.0/SignalProvider.Core.dll
+/Users/levi/Desktop/SignalProvider/SignalProvider.Infrastructure/bin/Debug/net8.0/SignalProvider.Core.pdb
+/Users/levi/Desktop/SignalProvider/SignalProvider.Infrastructure/obj/Debug/net8.0/SignalProvider.Infrastructure.csproj.AssemblyReference.cache
+/Users/levi/Desktop/SignalProvider/SignalProvider.Infrastructure/obj/Debug/net8.0/SignalProvider.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/levi/Desktop/SignalProvider/SignalProvider.Infrastructure/obj/Debug/net8.0/SignalProvider.Infrastructure.AssemblyInfoInputs.cache
+/Users/levi/Desktop/SignalProvider/SignalProvider.Infrastructure/obj/Debug/net8.0/SignalProvider.Infrastructure.AssemblyInfo.cs
+/Users/levi/Desktop/SignalProvider/SignalProvider.Infrastructure/obj/Debug/net8.0/SignalProvider.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/levi/Desktop/SignalProvider/SignalProvider.Infrastructure/obj/Debug/net8.0/SignalPr.766C63F9.Up2Date
+/Users/levi/Desktop/SignalProvider/SignalProvider.Infrastructure/obj/Debug/net8.0/SignalProvider.Infrastructure.dll
+/Users/levi/Desktop/SignalProvider/SignalProvider.Infrastructure/obj/Debug/net8.0/refint/SignalProvider.Infrastructure.dll
+/Users/levi/Desktop/SignalProvider/SignalProvider.Infrastructure/obj/Debug/net8.0/SignalProvider.Infrastructure.pdb
+/Users/levi/Desktop/SignalProvider/SignalProvider.Infrastructure/obj/Debug/net8.0/ref/SignalProvider.Infrastructure.dll
