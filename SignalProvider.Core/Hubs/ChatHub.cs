@@ -43,9 +43,10 @@ public class ChatHub(IHubContext<NotificationHub> notificationHub, ILogger<ChatH
 			if (message.GroupId == null)
 			{
 				await AddToGroup("GuestSupportWaitingRoom");
-				await Clients.Caller.SendAsync("AddedToGroup", "GuestSupportWaitingRoom");
-				await Clients.Group("GuestSupportWaitingRoom").SendAsync("MessageReceived", $"{message.UserName}: från chathub - ${DateTime.Now}");
 				_logger.LogInformation($"Added client to waiting group");
+
+				await Clients.Caller.SendAsync("AddedToGroup", "GuestSupportWaitingRoom");
+				await Clients.Group("GuestSupportWaitingRoom").SendAsync("MessageReceived", "Message was sent");
 			}
 			else 
 			{
