@@ -113,3 +113,4 @@
 /Users/levi/Desktop/SignalProvider/SignalProvider.Tests/obj/Debug/net8.0/SignalProvider.Tests.pdb
 /Users/levi/Desktop/SignalProvider/SignalProvider.Tests/obj/Debug/net8.0/SignalProvider.Tests.genruntimeconfig.cache
 /Users/levi/Desktop/SignalProvider/SignalProvider.Tests/obj/Debug/net8.0/ref/SignalProvider.Tests.dll
+/Users/levi/Desktop/SignalProvider/SignalProvider.Tests/obj/Debug/net8.0/SignalProvider.Tests.sourcelink.json

@@ -36,3 +36,4 @@
 /Users/levi/Desktop/SignalProvider/SignalProvider.Api/obj/Debug/net8.0/SignalProvider.Api.pdb
 /Users/levi/Desktop/SignalProvider/SignalProvider.Api/obj/Debug/net8.0/SignalProvider.Api.genruntimeconfig.cache
 /Users/levi/Desktop/SignalProvider/SignalProvider.Api/obj/Debug/net8.0/ref/SignalProvider.Api.dll
+/Users/levi/Desktop/SignalProvider/SignalProvider.Api/obj/Debug/net8.0/SignalProvider.Api.sourcelink.json

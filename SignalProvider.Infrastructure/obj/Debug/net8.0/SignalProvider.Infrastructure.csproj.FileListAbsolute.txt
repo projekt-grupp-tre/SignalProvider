@@ -13,3 +13,4 @@
 /Users/levi/Desktop/SignalProvider/SignalProvider.Infrastructure/obj/Debug/net8.0/refint/SignalProvider.Infrastructure.dll
 /Users/levi/Desktop/SignalProvider/SignalProvider.Infrastructure/obj/Debug/net8.0/SignalProvider.Infrastructure.pdb
 /Users/levi/Desktop/SignalProvider/SignalProvider.Infrastructure/obj/Debug/net8.0/ref/SignalProvider.Infrastructure.dll
+/Users/levi/Desktop/SignalProvider/SignalProvider.Infrastructure/obj/Debug/net8.0/SignalProvider.Infrastructure.sourcelink.json

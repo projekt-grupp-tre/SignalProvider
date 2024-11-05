@@ -10,3 +10,4 @@
 /Users/levi/Desktop/SignalProvider/SignalProvider.Core/obj/Debug/net8.0/refint/SignalProvider.Core.dll
 /Users/levi/Desktop/SignalProvider/SignalProvider.Core/obj/Debug/net8.0/SignalProvider.Core.pdb
 /Users/levi/Desktop/SignalProvider/SignalProvider.Core/obj/Debug/net8.0/ref/SignalProvider.Core.dll
+/Users/levi/Desktop/SignalProvider/SignalProvider.Core/obj/Debug/net8.0/SignalProvider.Core.sourcelink.json

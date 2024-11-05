@@ -1,0 +1,2 @@
+clienten skickar chat-meddelande via SendMessage
+  SendMessage kollar vilken grupp 
