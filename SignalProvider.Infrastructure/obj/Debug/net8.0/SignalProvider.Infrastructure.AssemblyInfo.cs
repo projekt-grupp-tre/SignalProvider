@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SignalProvider.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8e1587b6f8ee471706b82ecd390314a04276b5f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee8f840b932df0b9b1646da57837ff9ff24b2efe")]
 [assembly: System.Reflection.AssemblyProductAttribute("SignalProvider.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SignalProvider.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
