@@ -36,7 +36,7 @@ public class ChatHub(IHubContext<NotificationHub> notificationHub, ILogger<ChatH
 	}
 
 	public async Task SendMessage(ChatMessageModel message)
-  	{
+	{
 		try
 		{
 			if (message.GroupId == null)
@@ -51,8 +51,6 @@ public class ChatHub(IHubContext<NotificationHub> notificationHub, ILogger<ChatH
 			{
 				await Clients.Group(message.GroupId).SendAsync("MessageReceived", message);
 			}
-
-			// _logger.LogInformation($"Received message: {message}");
 		}
 		catch (Exception ex)
 		{
@@ -60,4 +58,16 @@ public class ChatHub(IHubContext<NotificationHub> notificationHub, ILogger<ChatH
 			throw;
 		}
 	}
+
+	public async Task UserIsTyping()
+	{
+		try { await Clients.OthersInGroup("GuestSupportWaitingRoom").SendAsync("UserIsTyping", true); Console.WriteLine("typing");}			
+		catch (Exception ex) { _logger.LogError(ex, "Error in UserIsTyping"); throw; }								
+	}
+	public async Task UserStoppedTyping()
+	{
+		try { await Clients.OthersInGroup("GuestSupportWaitingRoom").SendAsync("UserStoppedTyping", false); Console.WriteLine("not typing"); }			
+		catch (Exception ex) { _logger.LogError(ex, "Error in UserStoppedTyping"); throw; }								
+	}
+
 }
