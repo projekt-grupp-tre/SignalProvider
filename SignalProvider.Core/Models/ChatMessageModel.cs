@@ -6,6 +6,7 @@ public class ChatMessageModel
 	public string? SenderUserId { get; set; }
 	public string? GroupId { get; set; }
 	public string MessageContent { get; set; } = null!;
-	public DateTime MessageSent = DateTime.UtcNow;
+	public DateTime MessageSentAt = DateTime.UtcNow;
+	public DateTime? MessageReceivedAt {  get; set; }
 	public List<string>? AttachmentUrls { get; set; }
 }

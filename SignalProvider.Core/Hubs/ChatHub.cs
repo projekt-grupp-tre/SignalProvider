@@ -7,11 +7,15 @@ namespace SignalProvider.Core;
 public class ChatHub(IHubContext<NotificationHub> notificationHub, ILogger<ChatHub> logger) : Hub
 {
   	private readonly IHubContext<NotificationHub> _notificationHub = notificationHub;
-	private readonly ILogger<ChatHub> _logger = logger;
+		private readonly ILogger<ChatHub> _logger = logger;
+
+		private List<ChatMessageModel> messagesInWaitingRoom = new List<ChatMessageModel>();
 
 	public override async Task OnConnectedAsync()
 	{
 		await Clients.All.SendAsync("UserConnected", Context.ConnectionId);
+		await Groups.AddToGroupAsync(Context.ConnectionId, "GuestSupportWaitingRoom");
+		await Clients.Caller.SendAsync("AddedToGroup", "GuestSupportWaitingRoom");
 		await base.OnConnectedAsync();
 	}
 
@@ -21,38 +25,31 @@ public class ChatHub(IHubContext<NotificationHub> notificationHub, ILogger<ChatH
 		await base.OnDisconnectedAsync(exception);
 	}
 
-
 	public async Task AddToGroup(string groupName)
 	{
 		await Groups.AddToGroupAsync(Context.ConnectionId, groupName);
-		await Clients.Group(groupName).SendAsync("Send", $"{Context.ConnectionId} has joined the group {groupName}.");
 	}
 
 	public async Task RemoveFromGroup(string groupName)
 	{
 		await Groups.RemoveFromGroupAsync(Context.ConnectionId, groupName);
-		await Clients.Group(groupName).SendAsync("Send", $"{Context.ConnectionId} has left the group {groupName}.");
 	}
 
 	public async Task SendMessage(ChatMessageModel message)
   	{
 		try
 		{
-			_logger.LogInformation($"Received message: {message}");
-
 			if (message.GroupId == null)
 			{
 				await AddToGroup("GuestSupportWaitingRoom");
-				_logger.LogInformation($"Added client to waiting group");
-
 				await Clients.Caller.SendAsync("AddedToGroup", "GuestSupportWaitingRoom");
-				await Clients.Group("GuestSupportWaitingRoom").SendAsync("MessageReceived", message.MessageContent);
+
+				message.GroupId = "GuestSupportWaitingRoom";				
+				await Clients.Group("GuestSupportWaitingRoom").SendAsync("MessageReceived", message);
 			}
 			else 
 			{
-				await AddToGroup(message.GroupId);
-				await Clients.Group(message.GroupId).SendAsync("MessageReceived", message.MessageContent);
-				_logger.LogInformation($"Added client to last group");
+				await Clients.Group(message.GroupId).SendAsync("MessageReceived", message);
 			}
 
 			// _logger.LogInformation($"Received message: {message}");
