@@ -61,12 +61,12 @@ public class ChatHub(IHubContext<NotificationHub> notificationHub, ILogger<ChatH
 
 	public async Task UserIsTyping()
 	{
-		try { await Clients.OthersInGroup("GuestSupportWaitingRoom").SendAsync("UserIsTyping", true); Console.WriteLine("typing");}			
+		try { await Clients.OthersInGroup("GuestSupportWaitingRoom").SendAsync("UserIsTyping", true); }			
 		catch (Exception ex) { _logger.LogError(ex, "Error in UserIsTyping"); throw; }								
 	}
 	public async Task UserStoppedTyping()
 	{
-		try { await Clients.OthersInGroup("GuestSupportWaitingRoom").SendAsync("UserStoppedTyping", false); Console.WriteLine("not typing"); }			
+		try { await Clients.OthersInGroup("GuestSupportWaitingRoom").SendAsync("UserStoppedTyping", false); }			
 		catch (Exception ex) { _logger.LogError(ex, "Error in UserStoppedTyping"); throw; }								
 	}
 
