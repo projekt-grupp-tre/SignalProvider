@@ -12,11 +12,10 @@ builder.Services.AddCors(options =>
 		policy => 
 		{
 			policy
-				.WithOrigins("http://localhost:5198/")
+				.SetIsOriginAllowed(_ => true)
 				.AllowAnyHeader()
 				.AllowAnyMethod()
-				.AllowCredentials()
-				.SetIsOriginAllowed(_ => true);
+				.AllowCredentials();
 		});
 });
 

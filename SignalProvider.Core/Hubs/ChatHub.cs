@@ -18,23 +18,19 @@ public class ChatHub(IHubContext<NotificationHub> notificationHub, ILogger<ChatH
 		await Clients.Caller.SendAsync("AddedToGroup", "GuestSupportWaitingRoom");
 		await base.OnConnectedAsync();
 	}
-
 	public override async Task OnDisconnectedAsync(Exception? exception)
 	{
 		await Clients.All.SendAsync("UserDisconnected", Context.ConnectionId);
 		await base.OnDisconnectedAsync(exception);
 	}
-
 	public async Task AddToGroup(string groupName)
 	{
 		await Groups.AddToGroupAsync(Context.ConnectionId, groupName);
 	}
-
 	public async Task RemoveFromGroup(string groupName)
 	{
 		await Groups.RemoveFromGroupAsync(Context.ConnectionId, groupName);
 	}
-
 	public async Task SendMessage(ChatMessageModel message)
 	{
 		try
@@ -69,5 +65,4 @@ public class ChatHub(IHubContext<NotificationHub> notificationHub, ILogger<ChatH
 		try { await Clients.OthersInGroup("GuestSupportWaitingRoom").SendAsync("UserStoppedTyping", false); }			
 		catch (Exception ex) { _logger.LogError(ex, "Error in UserStoppedTyping"); throw; }								
 	}
-
 }
