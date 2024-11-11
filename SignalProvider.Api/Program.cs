@@ -27,6 +27,11 @@ builder.Services.AddLogging(logging =>
 
 var app = builder.Build();
 
+if (app.Environment.IsProduction())
+{
+    app.UseHttpsRedirection();
+}
+
 app.UseHttpsRedirection();
 app.UseCors("AllowMe");
 app.MapHub<ChatHub>("/chatHub");
